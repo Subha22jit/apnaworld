@@ -365,16 +365,16 @@
                      <form method = "POST" name="DATABASE">
                         <div class="row">
                            <div class="col-sm-12">
-                              <input class="contactus" placeholder="Name" type="text" name="Name" required>
+                              <input class="contactus" placeholder="Name" type="text" name="Name" minlength="2" required>
                            </div>
                            <div class="col-sm-12">
-                              <input class="contactus" placeholder="123-456-789" type="tel" name="Phone" required>
+                              <input class="contactus" placeholder="123-456-789" type="tel" name="Phone" minlength="10" required>
                            </div>
                            <div class="col-sm-12">
-                              <input class="contactus" placeholder="Email" type="email" name="Email" required>
+                              <input class="contactus" placeholder="Email" type="email" name="Email" minlength="3" required>
                            </div>
                            <div class="col-sm-12">
-                              <textarea class="textarea" placeholder="Message" type="text" name="Message" required></textarea>
+                              <textarea class="textarea" placeholder="Message" type="text" name="Message" minlength="8" required></textarea>
                            </div>
                            <div class="col-sm-12">
                               <input type="submit" value="Submit" name="submit">
