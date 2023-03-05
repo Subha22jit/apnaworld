@@ -362,13 +362,13 @@
                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 offset-md-3">
                   <div class="contact">
                      
-                     <form>
+                     <form method = "POST" name="DATABASE">
                         <div class="row">
                            <div class="col-sm-12">
                               <input class="contactus" placeholder="Name" type="text" name="Name">
                            </div>
                            <div class="col-sm-12">
-                              <input class="contactus" placeholder="Phone" type="text" name="Email">
+                              <input class="contactus" placeholder="Phone" type="text" name="Phone">
                            </div>
                            <div class="col-sm-12">
                               <input class="contactus" placeholder="Email" type="text" name="Email">
@@ -377,7 +377,7 @@
                               <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
                            </div>
                            <div class="col-sm-12">
-                              <button class="send">Send</button>
+                              <input type="submit" value="Submit" name="submit">
                            </div>
                         </div>
                      </form>
@@ -386,6 +386,19 @@
             </div>
          </div>
       </div>
+         
+         <script>
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbzA6X5ABQ1DGKzbMLT47v3Ywr3tqLMfJZhE3cpnmkpdfaqGCXpfYrfX88fEBphzlOPN9Q/exec'
+			const form = document.forms['DATABASE']
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
+		  </script>
       <!-- end Testimonial --> 
       <!--  footer --> 
       <footr>
