@@ -36,10 +36,13 @@
     skeleton
 ---------------------------------------------------------------------*/
 
-* {
+*,
+*::after,
+*::before {
  margin: 0px;
  padding: 0px;
-	box-sizing: border-box !important;
+	box-sizing: inherit; !important;
+font-family:inherit;
 }
 
 html {
